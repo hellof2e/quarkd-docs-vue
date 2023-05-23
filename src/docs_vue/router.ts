@@ -36,35 +36,6 @@ for (const path in modulesEnPage) {
   });
 }
 
-/** react 中英文文档 */
-const modulesPageReact = (import.meta as any).glob(
-  "/src/docs_vue/docs/**/doc-react.zh-CN.md"
-);
-for (const path in modulesPageReact) {
-  const name = (
-    /docs_vue\/docs\/(.*)\/doc-react.zh-CN.md/.exec(path) as any[]
-  )[1];
-  pagesRouter.push({
-    path: `/zh-CN/component/${name}-react`,
-    component: modulesPageReact[path],
-    name: `zh-CN/component/${name}-react`,
-  });
-}
-
-const modulesEnPageReact = (import.meta as any).glob(
-  "/src/docs_vue/docs/**/doc-react.en-US.md"
-);
-for (const path in modulesEnPageReact) {
-  const name = (
-    /docs_vue\/docs\/(.*)\/doc-react.en-US.md/.exec(path) as any[]
-  )[1];
-  pagesEnRouter.push({
-    path: `/en-US/component/${name}-react`,
-    component: modulesEnPageReact[path],
-    name: `en-US/component/${name}-react`,
-  });
-}
-
 /** 指南部分: 本工程 src/docs 文档 */
 const modulesDocs = (import.meta as any).glob("/src/docs/*.zh-CN.md");
 for (const path in modulesDocs) {

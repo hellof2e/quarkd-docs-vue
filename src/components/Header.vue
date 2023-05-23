@@ -22,9 +22,7 @@
                 <a
                   :class="isActive(item.type) ? 'nav-active' : ''"
                   :href="`${
-                    isZhLang
-                      ? `${item.pathName}-react`
-                      : `${item.pathEnName}-react`
+                    isZhLang ? `${item.pathName}` : `${item.pathEnName}`
                   }`"
                 >
                   {{ isZhLang ? item.cName : item.name }}
