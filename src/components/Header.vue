@@ -18,7 +18,7 @@
           <div class="menu-group">
             <!-- 指南 / 组件 -->
             <div class="nav-item menu" v-for="item in header" :key="item.name">
-              <template v-if="docMd === 'react' && item.name === 'Components'">
+              <template v-if="item.name === 'Components'">
                 <a
                   :class="isActive(item.type) ? 'nav-active' : ''"
                   :href="`${
@@ -338,7 +338,6 @@ export default defineComponent({
     });
 
     return {
-      docMd: localStorage.getItem("docMd"),
       isZhLang,
       header,
       versions,
