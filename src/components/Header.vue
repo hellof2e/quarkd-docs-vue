@@ -16,6 +16,27 @@
 
         <div class="toper-bar">
           <div class="menu-group">
+            <div class="nav-item menu" v-for="item in header" :key="item.name">
+              <template v-if="item.name === 'Components'">
+                <a
+                  :class="isActive(item.type) ? 'nav-active' : ''"
+                  :href="`${
+                    isZhLang ? `${item.pathName}` : `${item.pathEnName}`
+                  }`"
+                >
+                  {{ isZhLang ? item.cName : item.name }}
+                </a>
+              </template>
+              <template v-else>
+                <a
+                  :class="isActive(item.type) ? 'nav-active' : ''"
+                  :href="`${isZhLang ? item.pathName : item.pathEnName}`"
+                >
+                  {{ isZhLang ? item.cName : item.name }}
+                </a>
+              </template>
+            </div>
+
             <!-- 技术栈文档 -->
             <div class="nav-item flyout">
               <button type="button">
