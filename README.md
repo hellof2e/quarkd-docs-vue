@@ -1,6 +1,6 @@
 # Quark Design Documentation
 
-Quark Design uses Vue.js for its documentation.
+Quark Design documentation for Vue.
 
 To run the project locally, first install the dependencies:
 
