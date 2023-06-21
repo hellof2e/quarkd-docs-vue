@@ -97,8 +97,6 @@ const routes: Array<RouteRecordRaw> = [
   },
 ];
 
-console.log(routes, 9999);
-
 // 404 路由
 routes.push({
   name: "notFound",
