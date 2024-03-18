@@ -30,6 +30,11 @@ export default {
         show: true,
       },
       {
+        name: "tips",
+        cName: "Quarkd 2.x 样式修改",
+        show: true,
+      },
+      {
         name: "Notice",
         cName: "常见问题",
         show: true,
