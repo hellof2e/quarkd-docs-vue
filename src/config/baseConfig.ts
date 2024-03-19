@@ -31,7 +31,7 @@ export default {
       },
       {
         name: "tips",
-        cName: "Quarkd 2.x 样式修改",
+        cName: "Quarkd 2.x 样式修改升级",
         show: true,
       },
       {

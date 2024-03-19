@@ -1,19 +1,42 @@
 # 组件内部样式修改
 
-```html
-import "quarkd/lib/noticebar";
-<!-- 基础用法 -->
-<quark-noticebar class="notice-bar" :text="text"></quark-noticebar>
-```
 
-假如要修改组件内部的样式，比如修改背景色，可以这样：
-```
-.notice-bar::part(notice-bar) {
-  background-color: red;
+Quarkd 组件采用了 [::part](https://developer.mozilla.org/zh-CN/docs/Web/CSS/::part) 伪类选择器，可以修改组件内部的样式。
+
+<br />
+
+## 示例
+1、打开浏览器开发者工具，找到需要修改的组件内部元素，找到 part 属性。
+
+
+<img src="https://raw.githubusercontent.com/hellof2e/static/main/quarkd2-noticebar-part-pseudo-element.png" width="800" />
+
+<br />
+2、在 CSS 中使用 `::part(name)` 语法，修改组件内部样式。
+
+```css
+quark-noticebar::part(text) {
+  color: red;
+  font-style: italic;
 }
 ```
 
-浏览器兼容到：
-https://developer.mozilla.org/en-US/docs/Web/CSS/::part#browser_compatibility
+<br />
+<img src="https://raw.githubusercontent.com/hellof2e/static/main/quarkd2-noticebar-part-pseudo-element2.png" width="800" />
 
+
+
+## 浏览器兼容性
+
+已兼容主流浏览器，[详情点击这里](https://developer.mozilla.org/en-US/docs/Web/CSS/::part#browser_compatibility)
+
+
+
+## 在线示例
+
+<iframe
+  src="https://stackblitz.com/edit/quarkd2?file=index.html"
+  width="80%"
+  height="500"
+></iframe>
 
