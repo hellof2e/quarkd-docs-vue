@@ -34,6 +34,8 @@ quark-noticebar::part(text) {
 
 ## 在线示例
 
+访问：https://stackblitz.com/edit/quarkd2?file=index.html
+
 <iframe
   src="https://stackblitz.com/edit/quarkd2?file=index.html"
   width="80%"
