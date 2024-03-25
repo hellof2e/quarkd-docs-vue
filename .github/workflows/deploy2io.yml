@@ -24,7 +24,7 @@ jobs:
         with:
           branch: main # action 应该部署到的分支。
           folder: dist # 操作应该部署的文件夹。
-          clean: false
+          clean: true
           # repository-name: hellof2e/vue-quarkd.github.io
           repository-name: quark-ecosystem/quarkd-docs
           token: ${{ secrets.GIT_ACTION }}
