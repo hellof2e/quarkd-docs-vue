@@ -23,7 +23,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           branch: gh-pages
-          folder: '**/*'
+          # folder: '**/*'
           token: ${{ secrets.GIT_ACTION }}
           repository-name: quark-ecosystem/quarkd-docs
           target-folder: vue
