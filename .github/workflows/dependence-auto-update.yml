@@ -1,0 +1,27 @@
+# 当 quark-doc-home 有新版本发布，会自动触发当前工程打包，从而实现自动更新官网对应内容更新
+name: sync to quark-ecosystem/quarkd-docs
+
+on:
+  repository_dispatch:
+    types: [my-event] # 触发条件
+
+jobs:
+  copy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3 # 检出仓库
+      - uses: actions/setup-node@v3 # 设置node版本
+        with:
+          node-version: 16
+      - run: npm install
+      - run: npm run build
+
+      - name: Sync
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: main # action 应该部署到的分支。
+          folder: dist # 操作应该部署的文件夹。
+          clean: true
+          repository-name: quark-ecosystem/quarkd-docs
+          token: ${{ secrets.GIT_ACTION }}
+          target-folder: vue/
