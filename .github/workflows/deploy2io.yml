@@ -28,5 +28,5 @@ jobs:
           # repository-name: hellof2e/vue-quarkd.github.io
           repository-name: quark-ecosystem/quarkd-docs
           token: ${{ secrets.GIT_ACTION }}
-          target-folder: /
-          # target-folder: vue/
+          # target-folder: /
+          target-folder: vue/
