@@ -1,37 +1,37 @@
-name: Deploy V2 Site
+# name: Deploy V2 Site
 
-on:
-  push:
-    branches: [main]
-    paths:
-      - '**'
+# on:
+#   push:
+#     branches: [main]
+#     paths:
+#       - '**'
 
-  workflow_dispatch:
+#   workflow_dispatch:
 
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3 # 检出仓库
-      - uses: actions/setup-node@v3 # 设置node版本
-        with:
-          node-version: 16
-      - run: npm install
-      - run: npm run build
+# jobs:
+#   build-and-deploy:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3 # 检出仓库
+#       - uses: actions/setup-node@v3 # 设置node版本
+#         with:
+#           node-version: 16
+#       - run: npm install
+#       - run: npm run build
 
-      - name: Deploy for GitHub 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.4.1
-        with:
-          branch: main
-          folder: dist
-          token: ${{ secrets.GIT_ACTION }}
-          repository-name: quark-ecosystem/quarkd-docs
-          target-folder: vue
-          # enable single-commit to reduce the repo size
-          single-commit: true
-          clean: true
-          clean-exclude: |
-            v1/*
-            v1/**/*
-            v2/*
-            v2/**/*
+#       - name: Deploy for GitHub 🚀
+#         uses: JamesIves/github-pages-deploy-action@v4.4.1
+#         with:
+#           branch: main
+#           folder: dist
+#           token: ${{ secrets.GIT_ACTION }}
+#           repository-name: quark-ecosystem/quarkd-docs
+#           target-folder: vue
+#           # enable single-commit to reduce the repo size
+#           single-commit: true
+#           clean: true
+#           clean-exclude: |
+#             v1/*
+#             v1/**/*
+#             v2/*
+#             v2/**/*
