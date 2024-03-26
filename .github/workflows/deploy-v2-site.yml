@@ -8,8 +8,11 @@ on:
       - ".github/workflows/**"
       - "**"
 
+  repository_dispatch:
+    types: [my-event] # 触发条件
+
 jobs:
-  copy:
+  publish-site:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3 # 检出仓库
