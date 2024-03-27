@@ -23,8 +23,8 @@
     "push2GithubWebsite": "node ./scripts/push2GithubWebsite"
   },
   "dependencies": {
-    "quark-doc-header": "^2.0.0",
-    "quark-doc-home": "^2.0.2",
+    "quark-doc-header": "^2.0.27",
+    "quark-doc-home": "^2.0.27",
     "quarkd": "^1.0.2",
     "sass": "~1.32.0",
     "vue-i18n": "^9.1.10",
