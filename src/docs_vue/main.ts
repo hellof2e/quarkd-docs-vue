@@ -9,10 +9,10 @@ import "@/assets/styles/reset.scss";
 import "@/assets/styles/md-style.scss";
 
 // 主题 light or dark
-import "@/assets/styles/theme.scss";
+import "@/assets/styles/theme.css";
 
 if (isMobile) {
-   location.replace("https://quark-design.hellobike.com/demo/demo.html#/");
+  location.replace("https://quark-design.hellobike.com/demo/demo.html#/");
 }
 
 const app = createApp(App);
