@@ -24,13 +24,10 @@ npm i quarkd
 ## Usage
 
 ```tsx
-<template>
-  <div>
-    <quark-button type="primary" @click="handleClick">按钮</quark-button>;
-  </div>
-</template>
+<quark-button type="primary" @click="handleClick">按钮</quark-button>
+
 <script>
-  import "quarkd/lib/button";
+  import "quarkd/lib/button"
 </script>
 ```
 
