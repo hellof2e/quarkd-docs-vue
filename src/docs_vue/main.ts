@@ -9,7 +9,7 @@ import "@/assets/styles/reset.scss";
 import "@/assets/styles/md-style.scss";
 
 // 主题 light or dark
-import "@/assets/styles/theme.css";
+// import "@/assets/styles/theme.css";
 
 if (isMobile) {
   location.replace("https://quark-ecosystem.github.io/quarkd-docs/h5/demo#/");
