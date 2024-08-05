@@ -9,7 +9,7 @@ Quarkd 组件采用了 [::part](https://developer.mozilla.org/zh-CN/docs/Web/CSS
 1、打开浏览器开发者工具，找到需要修改的组件内部元素，找到 part 属性。
 
 
-<img src="https://raw.githubusercontent.com/hellof2e/static/main/quarkd2-noticebar-part-pseudo-element.png" width="800" />
+<img src="https://cdn.jsdelivr.net/npm/quark-static@latest/quarkd2-noticebar-part-pseudo-element.png" width="800" />
 
 <br />
 2、在 CSS 中使用 `::part(name)` 语法，修改组件内部样式。
@@ -22,7 +22,7 @@ quark-noticebar::part(text) {
 ```
 
 <br />
-<img src="https://raw.githubusercontent.com/hellof2e/static/main/quarkd2-noticebar-part-pseudo-element2.png" width="800" />
+<img src="https://cdn.jsdelivr.net/npm/quark-static@latest/quarkd2-noticebar-part-pseudo-element2.png" width="800" />
 
 
 
