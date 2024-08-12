@@ -18,14 +18,9 @@
     margin: 0 1px;
     color: #0da6e9;
     text-decoration-line: underline;
-
-    &:hover {
-      color: #bcc0ff;
-    }
-
-    &:active {
-      color: #bcc0ff;
-    }
+  }
+  a:hover {
+    opacity: .85;
   }
 
   &.isComponent {
@@ -94,14 +89,14 @@
 
     td {
       padding: 8px 20px;
-      color: #fff;
+      // color: #fff;
 
       &:first-child {
         border-left: 0px;
         code {
           margin: 0;
           padding: 2px 6px;
-          color: #38bdf7;
+          // color: #38bdf7;
           font-weight: 600;
           font-size: 11px;
           background-color: fade(#38bdf7, 10%);
